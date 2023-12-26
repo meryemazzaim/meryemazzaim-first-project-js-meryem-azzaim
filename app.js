@@ -9,11 +9,11 @@ if (login = "exit") {
 
 }
 
-let database = [
+let Database = [
     {
         fullName: "azzaim",
         userName: "meryem",
-        userEmail: "azzaim.userName@@gmail.com",
+        userEmail: "azzaimmeryem@gmail.com",
         userPassword: "password",
         userage: 15,
 
@@ -25,6 +25,7 @@ let database = [
 let fullName = prompt("what is your fullName ?")
 prompt(fullName.charAt(0).toUpperCase() + fullName.substring(1));
 
+
 let userName = prompt("what is your userName ?")
 
 while (userName.length < 5) {
@@ -32,10 +33,12 @@ while (userName.length < 5) {
 }
 
 // userName = userName.trim()
-prompt(userName.charAt(0).toUpperCase() + userName.substring(1));
+prompt(userName.charAt(0).toUpperCase() + userName.slice(1));
 
+// let namefullname = ` ${userName} ${fullName}`;
+// prompt(namefullname);
 
-//* parti 2  userEmail
+//* parti 2  userEmail and password
 let userEmail = prompt("insert your email ?")
 for (let index = 0; index < userEmail.length; index++) {
     let element = userEmail[index];
@@ -53,27 +56,57 @@ prompt(userEmail.toLocaleLowerCase());
 
 let userage = prompt("What is  your real age ?")
 
-if (userage.length <=3 ) {
-    prompt("userage should containe 2 number ?")
+if (userage.length >= 3) {
+    userage = prompt(" insert your real age should containe 2 number?")
+
+} else {
+    prompt("  is not number?")
 
 
-    
-} else if (userage.length=0) {
-    prompt(" entre your real age?")
-
-    
 }
-
-
-
-
-
+// (userage.length = ("string"))
 
 
 
 let userPassword = prompt("insert your password  the  password should containe 7 characters")
-while (userPassword.length < 7 ){
+while (userPassword.length < 7) {
     userPassword = prompt("the  password should containe 7 characters !")
 
 
+
 }
+let connected = [];
+
+const User = (password) => {
+
+    let connectUser = Database.filter(element => (element.userPassword === password))
+    console.log(connectUser);
+
+
+    if (connected.length == 0 && connectUser) {
+        connected.push(connectUser)
+        console.log("you are connected");
+    } else {
+        alert("the  info does not match our")
+    }
+
+}
+
+
+let loginPassword = prompt("Insert your password to login")
+while (loginPassword.length == 0) {
+    loginPassword = prompt("password Insert your password to login")
+}
+
+User(loginPassword)
+
+
+let login2 = prompt(" if you signing up ? or  ogging in ! or if you changing the password.")
+
+if (login2 = "exit") {
+    prompt(" if you signing up ? or  ogging in ! or if you changing the password.")
+} else {
+    prompt(" Data of the following information ")
+}
+
+
