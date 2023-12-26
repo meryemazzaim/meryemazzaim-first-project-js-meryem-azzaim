@@ -11,49 +11,69 @@ if (login = "exit") {
 
 let database = [
     {
-        fullName: "",
-        userName: "",
-        userEmail: "fullName.userName@@gmail.com",
+        fullName: "azzaim",
+        userName: "meryem",
+        userEmail: "azzaim.userName@@gmail.com",
         userPassword: "password",
+        userage: 15,
 
     }
 ];
 
-//parti 1 fullName userName and userEmail
+//*parti 1 fullName userName  
 
 let fullName = prompt("what is your fullName ?")
 prompt(fullName.charAt(0).toUpperCase() + fullName.substring(1));
 
 let userName = prompt("what is your userName ?")
 
-for (let index = 0; index < userName.length; index++) {
-    let element = userName[index];
-    while (userName.length < 5) {
-        userName = prompt("the  userName should containe  5 characters ! ")
-    }
-    
+while (userName.length < 5) {
+    userName = prompt("the  userName should containe  5 characters ! ")
 }
+
+// userName = userName.trim()
 prompt(userName.charAt(0).toUpperCase() + userName.substring(1));
 
+
+//* parti 2  userEmail
 let userEmail = prompt("insert your email ?")
 for (let index = 0; index < userEmail.length; index++) {
     let element = userEmail[index];
     if (userEmail.length < 10) {
         userEmail = prompt(" insert your email the  userEmail should containe  10 characters !")
 
-    } else if (userEmail = "") {
-        userEmail = prompt(" insert your email the  userEmail should containe  10 characters !")
-
-
     }
+    //   else if (userEmail = ("@@")) {
+
+
+    // }
+
 }
 prompt(userEmail.toLocaleLowerCase());
 
+let userage = prompt("What is  your real age ?")
+
+if (userage.length <=3 ) {
+    prompt("userage should containe 2 number ?")
 
 
-// let userPassword = prompt("insert your password  the  password should containe   8 characters")
-// while (userPassword.length < 8) {
-//     userPassword = prompt("the  password should containe   8 characters !")
+    
+} else if (userage.length=0) {
+    prompt(" entre your real age?")
+
+    
+}
 
 
-// }
+
+
+
+
+
+
+let userPassword = prompt("insert your password  the  password should containe 7 characters")
+while (userPassword.length < 7 ){
+    userPassword = prompt("the  password should containe 7 characters !")
+
+
+}
