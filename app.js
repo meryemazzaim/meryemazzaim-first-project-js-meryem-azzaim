@@ -15,7 +15,9 @@ let Database = [
         userName: "meryem",
         userEmail: "azzaimmeryem@gmail.com",
         userPassword: "password",
-        userage: 15,
+        userage: "age",
+        Withdraw: 1000,
+        Deposit: "",
 
     }
 ];
@@ -46,20 +48,21 @@ for (let index = 0; index < userEmail.length; index++) {
         userEmail = prompt(" insert your email the  userEmail should containe  10 characters !")
 
     }
-    //   else if (userEmail = ("@@")) {
-
+    // else if (userEmail = ("@@")) {
+    //     userEmail = prompt(" insert your email the  userEmail should containe  10 characters !")
 
     // }
 
-}
-prompt(userEmail.toLocaleLowerCase());
+} prompt(userEmail.toLocaleLowerCase());
+
 
 let userage = prompt("What is  your real age ?")
 
 if (userage.length >= 3) {
     userage = prompt(" insert your real age should containe 2 number?")
 
-} else {
+
+} else if (userage.length = ("string")) {
     prompt("  is not number?")
 
 
@@ -69,12 +72,11 @@ if (userage.length >= 3) {
 
 
 let userPassword = prompt("insert your password  the  password should containe 7 characters")
-while (userPassword.length < 7) {
+while (userPassword.length <= 7) {
     userPassword = prompt("the  password should containe 7 characters !")
 
-
-
 }
+//*partie 3  Password_confirmed:
 let connected = [];
 
 const User = (password) => {
@@ -87,7 +89,7 @@ const User = (password) => {
         connected.push(connectUser)
         console.log("you are connected");
     } else {
-        alert("the  info does not match our")
+        alert("the  info  not match our")
     }
 
 }
@@ -108,5 +110,22 @@ if (login2 = "exit") {
 } else {
     prompt(" Data of the following information ")
 }
+
+// let Withdraw = prompt(" Withdraw Money")
+// if (Withdraw.length <=1000) {
+//     Withdraw = prompt("can withdraw an amount from their bank")
+// }
+// else{
+//     Withdraw = prompt(" you are can't withdraw an amount from their bank")
+
+// }
+let ask_option = prompt("Quel est votre option ?");
+if (ask_option.length < 1000) {
+    alert("Withdraw Money")
+} else {
+    alert("T")
+}
+
+
 
 
